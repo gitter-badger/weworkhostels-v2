@@ -1,0 +1,8 @@
+# Ignore npm dependencies
+/node_modules
+
+# Ignore OSX files
+.DS_Store
+
+# Ignore generated JS
+bundle.js
