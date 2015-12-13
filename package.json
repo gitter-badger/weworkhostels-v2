@@ -16,9 +16,9 @@
   },
   "homepage": "https://github.com/hzhu/weworkhostels-v2#readme",
   "dependencies": {
+    "express": "^4.13.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-router": "^1.0.1",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0",
     "redux": "^3.0.4"
