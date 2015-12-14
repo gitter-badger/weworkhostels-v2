@@ -4,14 +4,27 @@ import ReactDOMServer from 'react-dom/server'
 import { Provider} from 'react-redux'
 
 import App from './containers/App'
+import About from './components/About'
+import PostaJob from './components/PostaJob'
+import JobListings from './components/JobListings'
 
-import configureStore from './store/configureStore' 
+import configureStore from './store/configureStore'
+
+import { ReduxRouter } from 'redux-router'
+import { Route } from 'react-router'
 
 const store = configureStore()
+window.store = store
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ReduxRouter>
+      <Route path="/" component={App}>
+        <Route path="About" component={About} />
+        <Route path="PostaJob" component={PostaJob} />
+        <Route path="JobListings" component={JobListings} />
+      </Route>
+    </ReduxRouter>
   </Provider>,
   document.getElementById('app')
 )
