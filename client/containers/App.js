@@ -1,33 +1,48 @@
-import { connect } from 'react-redux'
-import Counter from '../components/Counter'
-import increaseAction from '../actions/counter'
+import React, { Component, PropTypes } from 'react'
 
-// Map Redux state to component props
+import { connect } from 'react-redux'
+import Navigation from '../components/Navigation'
+import displayJob from '../actions/JobListings'
+
+import { bindActionCreators } from 'redux'
+import PostaJob from '../components/PostaJob'
+import addJob from '../actions/addJob'
+
+
+class App extends React.Component {
+  renderChildren () {
+    return React.Children.map(this.props.children, function(child){
+      return React.cloneElement(child, {jobListings: this.props.jobListings, onAddClick: this.props.onAddClick})
+      }.bind(this)
+    )
+  }
+  render () {
+    return (
+      <div>
+        <Navigation />
+        {this.renderChildren()}
+      </div>
+    )
+  }
+}
+
+
+
 function mapStateToProps (state) {
   return {
-    value: state.counter.count
+    jobListings: state.jobListings
   }
 }
-// Accepts Redux store's state
-// Returns a plain object that will be merged into the component's props via
-// connect(). Subscribes component to Redux store
 
-
-// Map Redux actions to component props
 function mapDispatchToProps (dispatch) {
   return {
-    onIncreaseClick: () => dispatch(increaseAction)
+    onAddClick: bindActionCreators(addJob, dispatch)
   }
 }
-// If an object is passed, each function inside it should be an action creator.
-// An object with the same function names, but bound to Redux store is merged to components props.
-// If function passed, it will be given 'dispatch'.
-// You must return an object that somehow uses dispatch to bind action creators.
 
-// Connected Component
-let App = connect(
+let AppContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Counter)
+)(App)
 
-export default App
+export default AppContainer

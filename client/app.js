@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import ReactDOMServer from 'react-dom/server'
 import { Provider} from 'react-redux'
 
-import App from './containers/App'
+import AppContainer from './containers/App'
+
 import About from './components/About'
 import PostaJob from './components/PostaJob'
 import JobListings from './components/JobListings'
@@ -19,7 +20,7 @@ window.store = store
 ReactDOM.render(
   <Provider store={store}>
     <ReduxRouter>
-      <Route path="/" component={App}>
+      <Route path="/" component={AppContainer}>
         <Route path="About" component={About} />
         <Route path="PostaJob" component={PostaJob} />
         <Route path="JobListings" component={JobListings} />

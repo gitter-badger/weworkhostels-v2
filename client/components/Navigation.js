@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 
-// React component
-
 class Navigation extends Component {
   render () {
     return (
@@ -23,24 +21,4 @@ class Navigation extends Component {
   }
 }
 
-class Counter extends React.Component {
-  render () {
-    const { value, onIncreaseClick } = this.props
-
-    return (
-      <div>
-        <span>{value}</span>
-        <button onClick={onIncreaseClick}>Increase</button>
-        <Navigation />
-        <div>{this.props.children}</div>
-      </div>
-    )
-  }
-}
-
-Counter.propTypes = {
-  value: PropTypes.number.isRequired,
-  onIncreaseClick: PropTypes.func.isRequired
-}
-
-export default Counter
+export default Navigation
