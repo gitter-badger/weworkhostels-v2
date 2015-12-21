@@ -23,7 +23,6 @@ ReactDOM.render(
       <Route path="/" component={AppContainer}>
         <Route path="About" component={About} />
         <Route path="PostaJob" component={PostaJob} />
-        <Route path="JobListings" component={JobListings} />
       </Route>
     </ReduxRouter>
   </Provider>,

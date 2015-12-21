@@ -1,13 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-
 import { connect } from 'react-redux'
 import Navigation from '../components/Navigation'
-import displayJob from '../actions/JobListings'
-
 import { bindActionCreators } from 'redux'
-import PostaJob from '../components/PostaJob'
 import addJob from '../actions/addJob'
-
 
 class App extends React.Component {
   renderChildren () {

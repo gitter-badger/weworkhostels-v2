@@ -7,13 +7,13 @@ class Navigation extends Component {
       <div>
         <ul>
           <li>
+              <Link to={`/`}>Job Listings</Link>
+          </li>
+          <li>
               <Link to={`/About`}>About</Link>
           </li>
           <li>
               <Link to={`/PostaJob`}>Post a Job</Link>
-          </li>
-          <li>
-              <Link to={`/JobListings`}>Job Listings</Link>
           </li>
         </ul>
       </div>
