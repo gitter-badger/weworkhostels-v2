@@ -20,8 +20,8 @@ ReactDOM.render(
   <Provider store={store}>
     <ReduxRouter>
       <Route path="/" component={AppContainer}>
-        <Route path="About" component={About} />
-        <Route path="PostaJob" component={PostaJob} />
+        <Route path="about" component={About} />
+        <Route path="post" component={PostaJob} />
       </Route>
     </ReduxRouter>
   </Provider>,

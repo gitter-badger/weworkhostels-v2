@@ -10,10 +10,10 @@ class Navigation extends Component {
               <Link to={`/`}>Job Listings</Link>
           </li>
           <li>
-              <Link to={`/About`}>About</Link>
+              <Link to={`/about`}>About</Link>
           </li>
           <li>
-              <Link to={`/PostaJob`}>Post a Job</Link>
+              <Link to={`/post`}>Post a Job</Link>
           </li>
         </ul>
       </div>
