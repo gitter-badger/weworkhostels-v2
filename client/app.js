@@ -7,7 +7,6 @@ import AppContainer from './containers/App'
 
 import About from './components/About'
 import PostaJob from './components/PostaJob'
-import JobListings from './components/JobListings'
 
 import configureStore from './store/configureStore'
 

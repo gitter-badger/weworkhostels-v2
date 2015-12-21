@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react'
 class PostaJob extends Component {
   render() {
     const { onAddClick } = this.props
-    console.log(this.props)
 
     return (
       <div>
