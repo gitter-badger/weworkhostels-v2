@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class PostaJob extends Component {
+class Post extends Component {
   render() {
     const { onAddClick } = this.props
 
@@ -14,4 +14,4 @@ class PostaJob extends Component {
 }
 
 
-export default PostaJob
+export default Post

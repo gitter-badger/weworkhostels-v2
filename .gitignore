@@ -6,3 +6,6 @@
 
 # Ignore generated JS
 bundle.js
+
+# Ignore logs
+npm-debug.log
