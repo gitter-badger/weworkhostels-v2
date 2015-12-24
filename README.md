@@ -9,6 +9,6 @@ Job board for hostels and backpackers.
 ### Development
 * `npm install`
 * `npm install -g nodemon`
-* `webpack -w"
+* `webpack -w`
 * `nodemon server.js`
 * Navigate to http://localhost:1337
