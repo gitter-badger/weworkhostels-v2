@@ -4,12 +4,12 @@ import Navigation from '../components/Navigation'
 import { bindActionCreators } from 'redux'
 
 import JobListings from '../components/JobListings'
-import addJob from '../actions/addJob'
+import * as addJob from '../actions/addJob'
 
 class App extends React.Component {
   renderChildren () {
     return React.Children.map(this.props.children, function(child){
-      return React.cloneElement(child, {onAddClick: this.props.onAddClick})
+      return React.cloneElement(child, {actions: this.props.actions})
       }.bind(this)
     )
   }
@@ -42,7 +42,7 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    onAddClick: bindActionCreators(addJob, dispatch)
+    actions: bindActionCreators(addJob, dispatch)
   }
 }
 
