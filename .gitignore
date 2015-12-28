@@ -9,3 +9,6 @@ bundle.js
 
 # Ignore logs
 npm-debug.log
+
+# Ignore output file of babel
+server-compiled.js
