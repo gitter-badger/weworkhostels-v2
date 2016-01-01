@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Web application to find hostel jobs and do work-exchange around the world.",
   "scripts": {
-    "start": "webpack && babel server.js --presets es2015 --out-file server-compiled.js && node server-compiled.js",
+    "build": "webpack && babel server.js --presets es2015 --out-file server-compiled.js",
+    "start": "node server-compiled.js",
     "test": "mocha src/client/components/__tests__/*.js --compilers js:babel-core/register"
   },
   "repository": {

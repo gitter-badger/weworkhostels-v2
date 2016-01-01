@@ -7,9 +7,9 @@ app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
 
+const PORT = process.env.PORT || 1337
 
-const server = app.listen(1337, () => {
-  const host = server.address().address
+const server = app.listen(PORT, () => {
   const port = server.address().port
-  console.log('Listening at http://%s:%s', host, port)
+  console.log('Listening at http://localhost:%s', port)
 })
