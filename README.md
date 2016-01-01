@@ -1,5 +1,6 @@
-### Description
-Job board for hostels and backpackers.
+# Jobs board for Hostels & Backpackers
+
+[![Build Status](https://snap-ci.com/hzhu/weworkhostels-v2/branch/master/build_image)](https://snap-ci.com/hzhu/weworkhostels-v2/branch/master)
 
 ### Getting Started
 * `npm install`
