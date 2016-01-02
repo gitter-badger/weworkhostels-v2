@@ -19,12 +19,13 @@
   "homepage": "https://github.com/hzhu/weworkhostels-v2#readme",
   "dependencies": {
     "express": "^4.13.3",
+    "firebase": "^2.3.2",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0",
-    "redux-router": "^1.0.0-beta5",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "redux-router": "^1.0.0-beta5"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
