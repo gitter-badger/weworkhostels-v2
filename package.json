@@ -6,18 +6,19 @@
     "clean": "rm -rf bundle.js && rm -rf server-compiled.js",
     "build": "webpack && babel server.js --presets es2015 --out-file server-compiled.js",
     "start": "node server-compiled.js",
+    "lint": "standard --verbose | snazzy",
     "test": "mocha src/client/components/__tests__/*.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hzhu/weworkhostels-v2.git"
   },
-  "author": "Anna Zhu, Henry Zhu",
-  "license": "ISC",
+  "author": "Anna Zhu <zhuanna93@gmail.com>, Henry Zhu <hz@henryzhu.me>",
+  "license": "Eclipse Public License",
   "bugs": {
     "url": "https://github.com/hzhu/weworkhostels-v2/issues"
   },
-  "homepage": "https://github.com/hzhu/weworkhostels-v2#readme",
+  "homepage": "http://weworkhostels.com",
   "dependencies": {
     "express": "^4.13.3",
     "firebase": "^2.3.2",
@@ -38,6 +39,8 @@
     "expect-jsx": "^2.2.1",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "^0.14.5",
+    "snazzy": "^2.0.1",
+    "standard": "^5.4.1",
     "webpack": "^1.12.9"
   }
 }
