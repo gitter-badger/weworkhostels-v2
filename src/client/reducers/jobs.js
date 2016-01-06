@@ -1,7 +1,16 @@
 const initialState = {
-  list: [{"id": 1, "title": "Manager"},
-         {"id": 2, "title": "Astronaut"},
-         {"id": 3, "title": "Security Guard"}]
+  list: [{
+      name: "NASA Astronaut Corps",
+      title: "Pilot",
+      description: "Fly to mars",
+      city: "Houston",
+      country: "United States",
+      email: "NASA@gmail.com  ",
+      website: "nasa.gov",
+      how: "Pigeon post application",
+      createDate: "01-07-25",
+      sponsored: "NASA"
+    }]
 }
 
 function jobsReducer (state = initialState, action) {
