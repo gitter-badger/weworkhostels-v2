@@ -1,17 +1,17 @@
 import { combineReducers } from 'redux';
 import { routerStateReducer } from 'redux-router'
 
-let initialState = [
-  {"id": 1, "title": "Manager"},
-  {"id": 2, "title": "Astronaut"},
-  {"id": 3, "title": "Security Guard"}
-]
-
+const initialState = {
+  jobsList: [ {"id": 1, "title": "Manager"},
+              {"id": 2, "title": "Astronaut"},
+              {"id": 3, "title": "Security Guard"}]
+}
 
 function jobListings (state = initialState, action) {
   switch (action.type) {
     case 'ADD_JOB':
-      return [...state, action.job]
+      var list = state.jobsList.concat([action.job])
+      return {...state, jobsList: list}
     default:
       return state
   }
