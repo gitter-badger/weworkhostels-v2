@@ -6,8 +6,8 @@ class JobListings extends Component {
   }
 
   render() {
-    const { jobListings } = this.props
-    const list = this.props.jobListings.jobsList.map((jobObject, index) =>
+    const { jobs } = this.props
+    const list = this.props.jobs.list.map((jobObject, index) =>
       <li key={index}>
         {jobObject.title}
       </li>

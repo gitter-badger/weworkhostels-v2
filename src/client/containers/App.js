@@ -18,7 +18,7 @@ class App extends React.Component {
       return (
         <div>
           <Navigation />
-          <JobListings jobListings={this.props.jobListings} />
+          <JobListings jobs={this.props.jobs} />
         </div>
       )
     } else {
@@ -32,11 +32,9 @@ class App extends React.Component {
   }
 }
 
-
-
 function mapStateToProps (state) {
   return {
-    jobListings: state.jobListings
+    jobs: state.jobs
   }
 }
 

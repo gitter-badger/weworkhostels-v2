@@ -1,5 +1,5 @@
 import { createStore, compose } from 'redux'
-import jobListingsReducer from '../reducers/jobListingsReducer'
+import rootReducer from '../reducers/index.js'
 
 import { createHistory } from 'history';
 import { reduxReactRouter } from 'redux-router';
@@ -7,7 +7,7 @@ import { reduxReactRouter } from 'redux-router';
 // Store
 const store = compose(
   reduxReactRouter({ createHistory })
-)(createStore)(jobListingsReducer)
+)(createStore)(rootReducer)
 
 export default function configureStore () {
   return store
