@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Input from './Input.js'
 import Firebase from 'firebase'
 const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
 
@@ -48,9 +49,15 @@ class JobForm extends Component {
     })
   }
 
+  handleState (value, name) {
+    // this.setState({namevalue})
+  }
+
   render() {
     return (
       <div>
+        <Input placeholder="Hostel name" handleState={this.handleState.bind(this)} />
+
         <input
           type="text"
           placeholder="hostel name"
