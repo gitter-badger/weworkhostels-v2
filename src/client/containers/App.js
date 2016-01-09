@@ -18,7 +18,7 @@ class App extends React.Component {
       return (
         <div>
           <Navigation />
-          <JobListings jobs={this.props.jobs} />
+          <JobListings jobs={this.props.jobs} actions={this.props.actions} />
         </div>
       )
     } else {
