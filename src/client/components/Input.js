@@ -8,11 +8,16 @@ class Input extends Component {
     }
   }
   updateText(e) {
-    this.props.handleState(e.target.value)
+    var key = this.props.inputName
+    var obj = {}
+    obj[this.props.inputName] = e.target.value
+    console.log(obj)
+    this.props.handleState(obj)
+
+    // set the value of our <input>
     this.setState({text: e.target.value})
   }
   render() {
-    console.log(this.state, this.props)
     return(
         <input
           type="text"
