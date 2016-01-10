@@ -6,7 +6,16 @@ import { bindActionCreators } from 'redux'
 import JobListings from '../components/JobListings'
 import * as addJob from '../actions/addJob'
 
+import Firebase from 'firebase'
+const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
+
 class App extends React.Component {
+  componentWillMount() {
+    JobListingsRef.on('child_added', (snapshot) => {
+      this.props.actions.addJob(snapshot.val())
+    })
+  }
+
   renderChildren () {
     return React.Children.map(this.props.children, function(child){
       return React.cloneElement(child, {actions: this.props.actions})

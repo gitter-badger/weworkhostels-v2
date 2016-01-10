@@ -36,7 +36,7 @@ class JobForm extends Component {
       createDate: new Date().getTime(),
       sponsored: this.state.sponsored,
     })
-    
+
     this.setState({
       name: "",
       title: "",
@@ -52,7 +52,6 @@ class JobForm extends Component {
 
   handleState (value) {
     this.setState(value)
-    console.log(this.state, " form state")
   }
 
   render() {

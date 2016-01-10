@@ -1,14 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import Firebase from 'firebase'
-const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
 
 class JobListings extends Component {
-  componentWillMount() {
-    JobListingsRef.on('child_added', (snapshot) => {
-      console.log('i am a child_added')
-      this.props.actions.addJob(snapshot.val())
-    })
-  }
 
   render() {
     const { jobs } = this.props
