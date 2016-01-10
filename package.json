@@ -7,7 +7,7 @@
     "build": "webpack && babel server.js --presets es2015 --out-file server-compiled.js",
     "start": "node server-compiled.js",
     "lint": "standard --verbose | snazzy",
-    "test": "mocha src/client/components/__tests__/*.js --compilers js:babel-core/register"
+    "test": "./scripts/test.sh"
   },
   "repository": {
     "type": "git",
