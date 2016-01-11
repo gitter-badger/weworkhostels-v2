@@ -1,7 +1,7 @@
 import test from 'tape'
 import * as actions from '../src/client/actions/addJob'
 
-test('addJob action creator should create an action to add a job', function(assert) {
+test('addJob action creator', function(assert) {
   const jobData = { title: 'Manager' }
   const actual = actions.addJob(jobData)
   const expectedAction = {
@@ -9,6 +9,6 @@ test('addJob action creator should create an action to add a job', function(asse
     job: jobData
   }
 
-  assert.deepEqual(actual, expectedAction)
+  assert.deepEqual(actual, expectedAction, 'It should return an action to add a job')
   assert.end()
 })
