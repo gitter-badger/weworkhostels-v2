@@ -20,11 +20,7 @@ class JobForm extends Component {
   }
 
   handleSubmit() {
-    const id = Math.random().toString(36).substring(7)
-    const jobRef = JobListingsRef.child(id)
-
-    jobRef.set({
-      id,
+    JobListingsRef.push({
       name: this.state.name,
       title: this.state.title,
       description: this.state.description,
