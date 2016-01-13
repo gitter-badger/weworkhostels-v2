@@ -1,5 +1,5 @@
 import test from 'tape'
-import jobsReducer from '../src/client/reducers/jobs'
+import jobsReducer from '../src/client/js/reducers/jobs'
 
 const actualReducer = jobsReducer
 const initialState = {

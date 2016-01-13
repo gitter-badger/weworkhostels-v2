@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/client/app.js',
+  entry: './src/client/js/app.js',
   output: {
     filename: 'bundle.js'
   },
@@ -11,10 +11,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: "style-loader!css-loader!postcss-loader!sass-loader!"
       }
     ]
   },
-  resolve: {
-    extensions: ['', '.js', '.json']
+  postcss: function () {
+    return [require('autoprefixer')]
   }
 }
