@@ -1,0 +1,2 @@
+--require ./test/components/compiler-mods/babelhook
+--require ./test/components/compiler-mods/css-null-compiler
