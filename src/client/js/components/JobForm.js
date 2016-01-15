@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Input from './Input.js'
 import Firebase from 'firebase'
 const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
-
+import { Link } from 'react-router'
 class JobForm extends Component {
   constructor(props) {
     super(props)
@@ -63,7 +63,7 @@ class JobForm extends Component {
         <Input placeholder="How?"            inputName="how"         handleState={this.handleState.bind(this)} />
         <Input placeholder="Sponsored"       inputName="sponsored"   handleState={this.handleState.bind(this)} />
 
-        <button onClick={this.handleSubmit.bind(this)}>Add Jobs</button>
+        <Link to={`/`} onClick={this.handleSubmit.bind(this)}>Add Job</Link>
       </div>
     )
   }
