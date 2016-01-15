@@ -32,18 +32,6 @@ class JobForm extends Component {
       createDate: new Date().getTime(),
       sponsored: this.state.sponsored,
     })
-
-    this.setState({
-      name: "",
-      title: "",
-      description: "",
-      city: "",
-      country: "",
-      email: "",
-      website: "",
-      how: "",
-      sponsored: ""
-    })
   }
 
   handleState (value) {
