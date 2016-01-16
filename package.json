@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Web application to find hostel jobs and do work-exchange around the world.",
   "scripts": {
-    "clean": "rm -rf bundle.js && rm -rf server-compiled.js",
-    "build": "webpack && babel server.js --presets es2015 --out-file server-compiled.js",
+    "clean": "rm -rf ./src/server/assets/compiled/bundle.js && rm -rf server-compiled.js",
+    "build": "webpack && babel src/server/server.js --presets es2015 --out-file server-compiled.js",
     "start": "node server-compiled.js",
     "lint": "standard --verbose | snazzy",
     "test": "./scripts/test.sh"

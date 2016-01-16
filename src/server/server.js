@@ -3,12 +3,13 @@ import jade from 'jade'
 const app = express()
 
 // Set static assets directory
-app.use(express.static(__dirname))
+app.use(express.static(__dirname + '/src/server/assets'))
 
 // Set Jade templates
 app.set('views', __dirname + '/src/client/templates')
 app.set('view engine', 'jade')
 
+console.log(__dirname)
 // Set routes
 app.get('/*', (req, res) => {
   res.render('index')
