@@ -1,3 +1,20 @@
 nav {
-  background-color: orange;
+  background-color: #5888A2;
+  overflow: hidden;
+
+  .nav-logo {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    li {
+      list-style: none;
+      float: left;
+      margin-right: 15px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }

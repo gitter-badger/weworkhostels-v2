@@ -6,6 +6,7 @@ class Navigation extends Component {
   render () {
     return (
       <nav>
+        <NavLogo />
         <ul>
           <li>
               <Link to={`/`}>Job Listings</Link>
@@ -19,6 +20,17 @@ class Navigation extends Component {
         </ul>
       </nav>
       )
+  }
+}
+
+class NavLogo extends Component {
+  render () {
+    return (
+      <div className="nav-logo">
+        <h1>We Work Hostels</h1>
+        <span>Work Exchange</span>
+      </div>
+    )
   }
 }
 
