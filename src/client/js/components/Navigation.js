@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
+import scss from '../../scss/base.scss'
 
 class Navigation extends Component {
   render () {
     return (
-      <div>
+      <nav>
+        <NavLogo />
         <ul>
           <li>
               <Link to={`/`}>Job Listings</Link>
@@ -16,8 +18,19 @@ class Navigation extends Component {
               <Link to={`/post`}>Post a Job</Link>
           </li>
         </ul>
-      </div>
+      </nav>
       )
+  }
+}
+
+class NavLogo extends Component {
+  render () {
+    return (
+      <div>
+        <h1>We Work Hostels</h1>
+        <span>Work Exchange</span>
+      </div>
+    )
   }
 }
 
