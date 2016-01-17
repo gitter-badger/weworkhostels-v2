@@ -5,7 +5,7 @@ import scss from '../../scss/base.scss'
 class Navigation extends Component {
   render () {
     return (
-      <nav>
+      <header>
         <NavLogo />
         <ul>
           <li>
@@ -18,7 +18,7 @@ class Navigation extends Component {
               <Link to={`/post`}>Post a Job</Link>
           </li>
         </ul>
-      </nav>
+      </header>
       )
   }
 }
