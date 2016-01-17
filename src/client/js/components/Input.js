@@ -19,11 +19,14 @@ class Input extends Component {
   }
   render() {
     return(
+        <div>
+        <p>{this.props.placeholder}:</p>
         <input
           type="text"
           placeholder={this.props.placeholder}
           onChange={this.updateText.bind(this)}
           value={this.state.text} />
+        </div>
     )
   }
 }

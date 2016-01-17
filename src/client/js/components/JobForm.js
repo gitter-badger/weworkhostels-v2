@@ -51,15 +51,26 @@ class JobForm extends Component {
       <div>
         <Input placeholder="Hostel name"     inputName="name"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Job title"       inputName="title"       handleState={this.handleState.bind(this)} />
-        <Input placeholder="Job description" inputName="description" handleState={this.handleState.bind(this)} />
+        <JobDescription />
         <Input placeholder="City"            inputName="city"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Country"         inputName="country"     handleState={this.handleState.bind(this)} />
-        <Input placeholder="E-mail"          inputName="email"       handleState={this.handleState.bind(this)} />
+        <Input placeholder="Email"           inputName="email"       handleState={this.handleState.bind(this)} />
         <Input placeholder="Website"         inputName="website"     handleState={this.handleState.bind(this)} />
-        <Input placeholder="How?"            inputName="how"         handleState={this.handleState.bind(this)} />
+        <Input placeholder="How to apply"    inputName="how"         handleState={this.handleState.bind(this)} />
         <Input placeholder="Sponsored"       inputName="sponsored"   handleState={this.handleState.bind(this)} />
 
         <Link to={`/`} onClick={this.handleSubmit.bind(this)}>Add Job</Link>
+      </div>
+    )
+  }
+}
+
+class JobDescription extends Component {
+  render() {
+    return (
+      <div>
+        <p>Job description:</p>
+        <div contentEditable="true"></div>
       </div>
     )
   }
