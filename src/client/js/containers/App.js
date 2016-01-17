@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import Navigation from '../components/Navigation'
+import Header from '../components/Header'
 import { bindActionCreators } from 'redux'
 
 import JobListings from '../components/JobListings'
@@ -33,14 +33,14 @@ class App extends React.Component {
     if (this.props.children === null) {
       return (
         <div>
-          <Navigation />
+          <Header />
           <JobListings jobs={this.props.jobs} actions={this.props.actions} />
         </div>
       )
     } else {
       return (
         <div>
-          <Navigation />
+          <Header />
           {this.renderChildren()}
         </div>
       )
