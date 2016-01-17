@@ -1,8 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 import Input from './Input.js'
 import Firebase from 'firebase'
-const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
 import { Link } from 'react-router'
+
+let JobListingsRef
+
+if (env === 'production') {
+  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
+} else {
+  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings-dev')
+}
+
 class JobForm extends Component {
   constructor(props) {
     super(props)

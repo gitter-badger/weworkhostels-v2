@@ -7,7 +7,14 @@ import JobListings from '../components/JobListings'
 import * as addJob from '../actions/addJob'
 
 import Firebase from 'firebase'
-const JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
+
+let JobListingsRef
+
+if (env === 'production') {
+  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
+} else {
+  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings-dev')
+}
 
 class App extends React.Component {
   componentWillMount() {

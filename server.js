@@ -1,5 +1,6 @@
 import express from 'express'
 import jade from 'jade'
+
 const app = express()
 
 // Set static assets directory
@@ -11,7 +12,7 @@ app.set('view engine', 'jade')
 
 // Set routes
 app.get('/*', (req, res) => {
-  res.render('index')
+  res.render('index', {env: process.env.NODE_ENV})
 })
 
 // Start server
