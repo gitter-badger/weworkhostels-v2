@@ -7,6 +7,7 @@ import { Route } from 'react-router'
 import AppContainer from './containers/App'
 import About from './components/About'
 import Post from './components/Post'
+import Job from './components/Job'
 import configureStore from './store/configureStore'
 
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="/" component={AppContainer}>
         <Route path="about" component={About} />
         <Route path="post" component={Post} />
+        <Route path="job/:jobID" component={Job} />
       </Route>
     </ReduxRouter>
   </Provider>,

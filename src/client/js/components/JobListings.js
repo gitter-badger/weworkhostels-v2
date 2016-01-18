@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
 
 class JobListings extends Component {
   render() {
     const { jobs } = this.props
     const { actions } = this.props
     const list = this.props.jobs.list.map((jobObject, index) =>
-      <JobListItem key={index} 
-                   index={index} 
-                   date={jobObject.createDate} 
-                   title={jobObject.title} 
-                   name={jobObject.name}/>
+      <JobListItem key={index}
+                   index={index}
+                   date={jobObject.createDate}
+                   title={jobObject.title}
+                   name={jobObject.name}
+                   id={jobObject.id} />
     )
 
     return (
@@ -27,9 +29,13 @@ class JobListItem extends Component {
     return humanDate.toDateString()
   }
   render() {
+    const id = this.props.id
+    let location = '/job/' + id
     return (
       <li>
-        {this.getDate(this.props.date)} | {this.props.title} at {this.props.name}
+        <Link to={location}>
+          {this.getDate(this.props.date)} | {this.props.title} at {this.props.name}
+        </Link>
       </li>
     )
   }

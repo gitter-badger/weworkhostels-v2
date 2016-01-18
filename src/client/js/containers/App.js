@@ -19,7 +19,9 @@ if (env === 'production') {
 class App extends React.Component {
   componentWillMount() {
     JobListingsRef.on('child_added', (snapshot) => {
-      this.props.actions.addJob(snapshot.val())
+      let job = snapshot.val()
+      job['id'] = snapshot.key()
+      this.props.actions.addJob(job)
     })
   }
 
