@@ -2,16 +2,14 @@
 
 set -e
 
-# watch and build bundle.js
-nohup webpack -w
+# Webpack watch to build bundle.js
+sleep 1
+osascript -e 'tell application "Terminal" to activate' -e 'tell application "System Events" to tell process "Terminal" to keystroke "t" using command down' -e 'tell application "Terminal" to do script "webpack -w" in selected tab of the front window'
 
-# watch and build server.js
-nohup babel server.js --watch --presets es2015 --out-file server-compiled.js </dev/null &
+# Babel watch to build server-compiled.js
+sleep 1
+osascript -e 'tell application "Terminal" to activate' -e 'tell application "System Events" to tell process "Terminal" to keystroke "t" using command down' -e 'tell application "Terminal" to do script "babel --watch server.js --presets es2015 --out-file server-compiled.js" in selected tab of the front window'
 
-# watch and restart Node server
-nohup nodemon server-compiled.js </dev/null &
-
-
-# You can kill nohup processes by grepping the process and killing it's PID
-# `ps aux | grep babel` => returns a list of babel processes, with PIDs
-# `kill -9 <PID>`
+# nodemon to watch server-compiled.js for changes & restart Node server
+sleep 5
+osascript -e 'tell application "Terminal" to activate' -e 'tell application "System Events" to tell process "Terminal" to keystroke "t" using command down' -e 'tell application "Terminal" to do script "nodemon server-compiled.js" in selected tab of the front window'
