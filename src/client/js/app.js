@@ -22,6 +22,7 @@ ReactDOM.render(
         <Route path="about" component={About} />
         <Route path="post" component={Post} />
         <Route path="job/:jobID" component={Job} />
+        <Route path="foo/bar" component={Job} />
       </Route>
     </ReduxRouter>
   </Provider>,
