@@ -27,7 +27,7 @@ class App extends React.Component {
 
   renderChildren () {
     return React.Children.map(this.props.children, function(child){
-      return React.cloneElement(child, {actions: this.props.actions})
+      return React.cloneElement(child, {actions: this.props.actions, jobs: this.props.jobs})
       }.bind(this)
     )
   }
