@@ -26,8 +26,6 @@ app.get('/job/:uid', function (req, res) {
   res.render('index', {env: process.env.NODE_ENV})
 })
 
-console.log('bang')
-
 // Start server
 const PORT = process.env.PORT || 1337
 const server = app.listen(PORT, () => {
