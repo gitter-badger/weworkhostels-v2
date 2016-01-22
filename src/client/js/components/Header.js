@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
-import scss from '../../scss/base.scss'
 
 class Header extends Component {
   render () {

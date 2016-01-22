@@ -8,6 +8,8 @@ import * as addJob from '../actions/addJob'
 
 import Firebase from 'firebase'
 
+import scss from '../../scss/main.scss'
+
 let JobListingsRef
 
 if (env === 'production') {
