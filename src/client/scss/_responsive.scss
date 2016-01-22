@@ -1,0 +1,19 @@
+@mixin chosenDevice($device) {
+  @if $device == phone {
+    @media (max-width: 475px) {// iPhone width is 375px portrait
+      @content;
+    }
+  }
+
+  @if $device == tablet {
+    @media (max-width: 735px) {
+      @content;
+    }
+  }
+
+  @if $device == largeDesktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
