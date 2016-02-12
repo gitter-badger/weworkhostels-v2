@@ -70,7 +70,9 @@ class JobDescription extends Component {
     return (
       <div>
         <p>Job description:</p>
-        <div contentEditable="true"></div>
+        <div
+          contentEditable="true"
+          className="description"></div>
       </div>
     )
   }

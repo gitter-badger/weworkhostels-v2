@@ -1,0 +1,13 @@
+.post {
+  width: 960px;
+  margin: 0 auto;
+
+  @include chosenDevice(phone) {
+    max-width: 320px;
+  }
+
+  .description {
+    border: 1px solid #CCC;
+    height: 200px;
+  }
+}

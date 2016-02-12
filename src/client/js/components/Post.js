@@ -5,7 +5,7 @@ class Post extends Component {
   render() {
     const { actions } = this.props
     return (
-      <div>
+      <div className="post">
         <h1>POST IT HERE</h1>
         <JobForm />
       </div>
