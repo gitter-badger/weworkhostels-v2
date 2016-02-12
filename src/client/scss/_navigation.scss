@@ -1,6 +1,10 @@
-header {
+.header-container {
   background-color: #5888A2;
+
+  header {
   overflow: hidden;
+  width: 960px;
+  margin: 0 auto;
 
   .nav-logo {
     float: left;
@@ -20,25 +24,30 @@ header {
     }
   }
 
-  ul {
-    float: right;
-    @include chosenDevice(phone) {
-      float: none;
-      margin: 15px auto;
-      max-width: 247px;
-      overflow: hidden;
-      padding: 0px 0 0 15px;
-    }
+  nav {
+    overflow: hidden;
+    ul {
+      float: right;
+      @include chosenDevice(phone) {
+        float: none;
+        margin: 15px auto;
+        max-width: 247px;
+        overflow: hidden;
+        padding: 0px 0 0 15px;
+      }
 
-    li {
-      list-style: none;
-      float: left;
-      margin-right: 15px;
-      a {
-        text-decoration: none;
-        color: #FFF;
-        font-size: 14px;
+      li {
+        list-style: none;
+        float: left;
+        margin-right: 15px;
+        a {
+          text-decoration: none;
+          color: #FFF;
+          font-size: 14px;
+        }
       }
     }
   }
 }
+}
+

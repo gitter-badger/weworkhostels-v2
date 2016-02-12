@@ -4,10 +4,12 @@ import { Link } from 'react-router'
 class Header extends Component {
   render () {
     return (
-      <header>
-        <NavLogo />
-        <Navigation />
-      </header>
+      <div className="header-container">
+        <header>
+          <NavLogo />
+          <Navigation />
+        </header>
+      </div>
     )
   }
 }
