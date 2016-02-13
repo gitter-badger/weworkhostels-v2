@@ -11,6 +11,8 @@ class JobListings extends Component {
                    date={jobObject.createDate}
                    title={jobObject.title}
                    name={jobObject.name}
+                   city={jobObject.city}
+                   country={jobObject.country}
                    id={jobObject.id} />
     )
 
@@ -36,7 +38,12 @@ class JobListItem extends Component {
     return (
       <li>
         <Link to={location}>
-          {this.getDate(this.props.date)} | {this.props.title} at {this.props.name}
+          <span className="date">{this.getDate(this.props.date)}</span>
+          <span> | </span>
+          <span className="title">{this.props.title}</span>
+          <span> at </span>
+          <span className="name">{this.props.name} </span>
+          <span className="location">{this.props.city}, {this.props.country}</span>
         </Link>
       </li>
     )

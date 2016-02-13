@@ -1,0 +1,27 @@
+.job-listings {
+  li {
+    list-style: none;
+    border-bottom: 1px solid #AFD0E1;
+    a {
+      display: block;
+      padding: 20px;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+    .date {
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 14px;
+    }
+    .name {
+
+    }
+    .location {
+      font-size: 13px;
+      float: right;
+
+    }
+  }
+}
