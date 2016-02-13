@@ -15,9 +15,11 @@ class JobListings extends Component {
     )
 
     return (
-      <div>
-        <h1>Job Listings</h1>
-        {list}
+      <div className="container">
+        <div className="job-listings content">
+          <h1>Job Listings</h1>
+          {list}
+        </div>
       </div>
     )
   }
