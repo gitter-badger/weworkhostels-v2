@@ -1,53 +1,60 @@
 .header-container {
+  padding: 25px 50px;
   background-color: #5888A2;
-
-  header {
-  overflow: hidden;
-  width: 960px;
-  margin: 0 auto;
-
-  .nav-logo {
-    float: left;
     @include chosenDevice(phone) {
-      float: none;
-      text-align: center;
-    }
-
-    h1 {
-      color: #FFF;
-    }
-
-    span {
-      @include chosenDevice(phone) {
-        display: none;
-      }
-    }
   }
 
-  nav {
+  header {
     overflow: hidden;
-    ul {
-      float: right;
+    margin: 0 auto;
+    max-width: 960px;
+
+    @include chosenDevice(phone) {
+      width: auto;
+    }
+
+
+    .nav-logo {
+      float: left;
       @include chosenDevice(phone) {
         float: none;
-        margin: 15px auto;
-        max-width: 247px;
-        overflow: hidden;
-        padding: 0px 0 0 15px;
+        text-align: center;
       }
 
-      li {
-        list-style: none;
-        float: left;
-        margin-right: 15px;
-        a {
-          text-decoration: none;
-          color: #FFF;
-          font-size: 14px;
+      h1 {
+        color: #FFF;
+      }
+
+      span {
+        @include chosenDevice(phone) {
+          display: none;
+        }
+      }
+    }
+    nav {
+      overflow: hidden;
+      ul {
+        float: right;
+        @include chosenDevice(phone) {
+          float: none;
+          margin: 15px auto;
+          max-width: 247px;
+          overflow: hidden;
+          padding: 0px 0 0 15px;
+        }
+
+        li {
+          list-style: none;
+          float: left;
+          margin-right: 15px;
+          a {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 14px;
+          }
         }
       }
     }
   }
-}
 }
 
