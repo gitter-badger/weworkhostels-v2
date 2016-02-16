@@ -26,6 +26,14 @@
       }
 
       span {
+        background: #FFF;
+        padding: 5px;
+        color: #5888A2;
+        border-radius: 3px;
+        font-size: 12px;
+        float: right;
+        position: relative;
+        top: -10px;
         @include chosenDevice(phone) {
           display: none;
         }
@@ -47,6 +55,7 @@
           list-style: none;
           float: left;
           margin-right: 15px;
+          padding: 10px;
           a {
             text-decoration: none;
             color: #FFF;
