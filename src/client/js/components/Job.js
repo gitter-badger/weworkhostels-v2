@@ -18,7 +18,6 @@ class Job extends Component {
     const jobID = this.props.location.pathname.toString().slice(5)
     const jobsList = this.props.jobs.list
     const job = this.getSpecificJob.call(this, jobsList, jobID)
-    console.log(job)
 
     if (job === undefined) {
       return (

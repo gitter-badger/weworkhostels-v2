@@ -5,7 +5,17 @@ class JobListings extends Component {
   render() {
     const { jobs } = this.props
     const { actions } = this.props
-    const list = this.props.jobs.list.map((jobObject, index) =>
+    const list = this.props.jobs.list.sort(function(a, b) {
+      // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
+      if (a.createDate > b.createDate) {
+        return -1 // move a to lower index than b
+      }
+      if (a.createDate < b.createDate) {
+        return 1 // move b to lower index than a
+      }
+      return 0 // leave a and b unchanged with respect to each other
+    }).map((jobObject, index) =>
+      // create an array of components
       <JobListItem key={index}
                    index={index}
                    date={jobObject.createDate}
@@ -26,6 +36,7 @@ class JobListings extends Component {
     )
   }
 }
+
 
 class JobListItem extends Component {
   getDate(epoch) {
