@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Input from './Input.js'
+import JobDescription from './JobDescription.js'
 import Firebase from 'firebase'
 import { Link } from 'react-router'
 
@@ -51,7 +52,7 @@ class JobForm extends Component {
       <div>
         <Input placeholder="Hostel name"     inputName="name"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Job title"       inputName="title"       handleState={this.handleState.bind(this)} />
-        <JobDescription />
+        <JobDescription                      inputName="description" handleState={this.handleState.bind(this)} />
         <Input placeholder="City"            inputName="city"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Country"         inputName="country"     handleState={this.handleState.bind(this)} />
         <Input placeholder="Email"           inputName="email"       handleState={this.handleState.bind(this)} />
@@ -60,19 +61,6 @@ class JobForm extends Component {
         <Input placeholder="Sponsored"       inputName="sponsored"   handleState={this.handleState.bind(this)} />
 
         <Link to={`/`} onClick={this.handleSubmit.bind(this)}>Add Job</Link>
-      </div>
-    )
-  }
-}
-
-class JobDescription extends Component {
-  render() {
-    return (
-      <div>
-        <p>Job description:</p>
-        <div
-          contentEditable="true"
-          className="description"></div>
       </div>
     )
   }
