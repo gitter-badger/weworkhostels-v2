@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Input from './Input.js'
-import JobDescription from './JobDescription.js'
+import DescriptionInput from './DescriptionInput.js'
 import Firebase from 'firebase'
 import { Link } from 'react-router'
 
@@ -52,7 +52,7 @@ class JobForm extends Component {
       <div>
         <Input placeholder="Hostel name"     inputName="name"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Job title"       inputName="title"       handleState={this.handleState.bind(this)} />
-        <JobDescription                      inputName="description" handleState={this.handleState.bind(this)} />
+        <DescriptionInput                      inputName="description" handleState={this.handleState.bind(this)} />
         <Input placeholder="City"            inputName="city"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Country"         inputName="country"     handleState={this.handleState.bind(this)} />
         <Input placeholder="Email"           inputName="email"       handleState={this.handleState.bind(this)} />

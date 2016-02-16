@@ -1,0 +1,18 @@
+.job {
+  .info-container {
+    padding: 10px 15px;
+    border-bottom: 1px solid #CCC;
+    .title {
+      margin-top: 20px;
+      line-height: 35px;
+      font-size: 35px;
+    }
+    .name, .location {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+  .job-description {
+    padding: 30px 15px;
+  }
+}

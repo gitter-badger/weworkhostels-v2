@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class JobDescription extends Component {
+class DescriptionInput extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,4 +30,4 @@ class JobDescription extends Component {
 }
 
 
-export default JobDescription
+export default DescriptionInput
