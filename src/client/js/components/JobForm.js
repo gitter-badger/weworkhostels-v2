@@ -52,7 +52,7 @@ class JobForm extends Component {
       <div>
         <Input placeholder="Hostel name"     inputName="name"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Job title"       inputName="title"       handleState={this.handleState.bind(this)} />
-        <DescriptionInput                      inputName="description" handleState={this.handleState.bind(this)} />
+        <DescriptionInput                    inputName="description" handleState={this.handleState.bind(this)} />
         <Input placeholder="City"            inputName="city"        handleState={this.handleState.bind(this)} />
         <Input placeholder="Country"         inputName="country"     handleState={this.handleState.bind(this)} />
         <Input placeholder="Email"           inputName="email"       handleState={this.handleState.bind(this)} />
@@ -60,7 +60,7 @@ class JobForm extends Component {
         <Input placeholder="How to apply"    inputName="how"         handleState={this.handleState.bind(this)} />
         <Input placeholder="Sponsored"       inputName="sponsored"   handleState={this.handleState.bind(this)} />
 
-        <Link to={`/`} onClick={this.handleSubmit.bind(this)}>Add Job</Link>
+        <Link to={`/`} onClick={this.handleSubmit.bind(this)} className="btn">Post Job</Link>
       </div>
     )
   }

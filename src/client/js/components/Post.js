@@ -7,7 +7,7 @@ class Post extends Component {
     return (
       <div className="container">
         <div className="post content">
-          <h1>POST IT HERE</h1>
+          <h1>Post a Hostel Job</h1>
           <JobForm />
         </div>
       </div>

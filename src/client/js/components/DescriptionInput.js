@@ -19,7 +19,7 @@ class DescriptionInput extends Component {
   render() {
     return (
       <div>
-        <p>Job description:</p>
+        <div className="description-title">Job description:</div>
         <div
           contentEditable="true"
           className="description"
