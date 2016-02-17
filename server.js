@@ -18,13 +18,9 @@ app.get('/*', (req, res) => {
   res.render('index', {env: process.env.NODE_ENV})
 })
 
-app.param('uid', function (req, res, next, id) {
-  next()
-})
+app.param('uid', (req, res, next, id) => next())
 
-app.get('/job/:uid', function (req, res) {
-  res.render('index', {env: process.env.NODE_ENV})
-})
+app.get('/job/:uid', (req, res) => res.render('index', {env: process.env.NODE_ENV}))
 
 // Start server
 const PORT = process.env.PORT || 1337

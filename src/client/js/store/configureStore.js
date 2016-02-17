@@ -9,6 +9,8 @@ const store = compose(
   reduxReactRouter({ createHistory })
 )(createStore)(rootReducer)
 
-export default function configureStore () {
+let configureStore = () => {
   return store
 }
+
+export default configureStore

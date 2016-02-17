@@ -13,7 +13,7 @@ const initialState = {
   ]
 }
 
-function jobsReducer (state = initialState, action) {
+let jobsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_JOB':
       var updatedList = state.list.concat([action.job])

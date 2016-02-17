@@ -28,10 +28,10 @@ class App extends Component {
   }
 
   renderChildren () {
-    return React.Children.map(this.props.children, function (child) {
+    // creating new child elements with the new props merged with the original element's props.
+    return React.Children.map(this.props.children, (child) => {
       return React.cloneElement(child, {actions: this.props.actions, jobs: this.props.jobs})
-    }.bind(this)
-    )
+    })
   }
   render () {
     if (this.props.children === null) {
@@ -52,13 +52,13 @@ class App extends Component {
   }
 }
 
-function mapStateToProps (state) {
+let mapStateToProps = (state) => {
   return {
     jobs: state.jobs
   }
 }
 
-function mapDispatchToProps (dispatch) {
+let mapDispatchToProps = (dispatch) => {
   return {
     actions: bindActionCreators(addJob, dispatch)
   }
