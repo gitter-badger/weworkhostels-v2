@@ -13,22 +13,22 @@ if (env === 'production') {
 }
 
 class JobForm extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
-      name: "",
-      title: "",
-      description: "",
-      city: "",
-      country: "",
-      email: "",
-      website: "",
-      how: "",
-      sponsored: ""
+      name: '',
+      title: '',
+      description: '',
+      city: '',
+      country: '',
+      email: '',
+      website: '',
+      how: '',
+      sponsored: ''
     }
   }
 
-  handleSubmit() {
+  handleSubmit () {
     JobListingsRef.push({
       name: this.state.name,
       title: this.state.title,
@@ -39,7 +39,7 @@ class JobForm extends Component {
       website: this.state.website,
       how: this.state.how,
       createDate: new Date().getTime(),
-      sponsored: this.state.sponsored,
+      sponsored: this.state.sponsored
     })
   }
 
@@ -47,23 +47,24 @@ class JobForm extends Component {
     this.setState(value)
   }
 
-  render() {
+  render () {
     return (
       <div>
-        <Input placeholder="Hostel name"     inputName="name"        handleState={this.handleState.bind(this)} />
-        <Input placeholder="Job title"       inputName="title"       handleState={this.handleState.bind(this)} />
-        <DescriptionInput                    inputName="description" handleState={this.handleState.bind(this)} />
-        <Input placeholder="City"            inputName="city"        handleState={this.handleState.bind(this)} />
-        <Input placeholder="Country"         inputName="country"     handleState={this.handleState.bind(this)} />
-        <Input placeholder="Email"           inputName="email"       handleState={this.handleState.bind(this)} />
-        <Input placeholder="Website"         inputName="website"     handleState={this.handleState.bind(this)} />
-        <Input placeholder="How to apply"    inputName="how"         handleState={this.handleState.bind(this)} />
-        <Input placeholder="Sponsored"       inputName="sponsored"   handleState={this.handleState.bind(this)} />
+        <Input placeholder='Hostel name'     inputName='name'        handleState={this.handleState.bind(this)} />
+        <Input placeholder='Job title'       inputName='title'       handleState={this.handleState.bind(this)} />
+        <DescriptionInput                    inputName='description' handleState={this.handleState.bind(this)} />
+        <Input placeholder='City'            inputName='city'        handleState={this.handleState.bind(this)} />
+        <Input placeholder='Country'         inputName='country'     handleState={this.handleState.bind(this)} />
+        <Input placeholder='Email'           inputName='email'       handleState={this.handleState.bind(this)} />
+        <Input placeholder='Website'         inputName='website'     handleState={this.handleState.bind(this)} />
+        <Input placeholder='How to apply'    inputName='how'         handleState={this.handleState.bind(this)} />
+        <Input placeholder='Sponsored'       inputName='sponsored'   handleState={this.handleState.bind(this)} />
 
-        <Link to={`/`} onClick={this.handleSubmit.bind(this)} className="btn">Post Job</Link>
+        <Link to={`/`} onClick={this.handleSubmit.bind(this)} className='btn'>Post Job</Link>
       </div>
     )
   }
 }
 
 export default JobForm
+

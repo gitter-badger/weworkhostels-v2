@@ -10,7 +10,7 @@ app.use(express.static(__dirname))
 app.use('/job', express.static(__dirname))
 
 // Set Jade templates
-app.set('views', __dirname + '/src/client/templates')
+app.set('views', path.join(__dirname, 'src/client/templates'))
 app.set('view engine', 'jade')
 
 // Set routes

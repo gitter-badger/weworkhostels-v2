@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 class Header extends Component {
   render () {
     return (
-      <div className="header-container">
+      <div className='header-container'>
         <header>
           <NavLogo />
           <Navigation />
@@ -17,7 +17,7 @@ class Header extends Component {
 class NavLogo extends Component {
   render () {
     return (
-      <div className="nav-logo">
+      <div className='nav-logo'>
         <h1>We Work Hostels</h1>
         <span>Work Exchange</span>
       </div>

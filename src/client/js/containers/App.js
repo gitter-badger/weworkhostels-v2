@@ -18,8 +18,8 @@ if (env === 'production') {
   JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings-dev')
 }
 
-class App extends React.Component {
-  componentWillMount() {
+class App extends Component {
+  componentWillMount () {
     JobListingsRef.on('child_added', (snapshot) => {
       let job = snapshot.val()
       job['id'] = snapshot.key()
@@ -28,9 +28,9 @@ class App extends React.Component {
   }
 
   renderChildren () {
-    return React.Children.map(this.props.children, function(child){
+    return React.Children.map(this.props.children, function (child) {
       return React.cloneElement(child, {actions: this.props.actions, jobs: this.props.jobs})
-      }.bind(this)
+    }.bind(this)
     )
   }
   render () {

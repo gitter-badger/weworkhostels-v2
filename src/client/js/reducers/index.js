@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 import { routerStateReducer } from 'redux-router'
 import jobsReducer from './jobs.js'
 

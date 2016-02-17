@@ -3,7 +3,7 @@ import jobsReducer from '../../src/client/js/reducers/jobs'
 
 const actualReducer = jobsReducer
 const initialState = {
-list: []
+  list: []
 }
 const initialState2 = {
   list: [ { title: 'Actress' } ]
@@ -11,7 +11,7 @@ const initialState2 = {
 const action = {
   type: 'ADD_JOB',
   job: {
-  title: 'Web developer'
+    title: 'Web developer'
   }
 }
 
@@ -31,7 +31,7 @@ test('jobsReducer should return the initial state if state is not provided.', (a
 
 test('jobsReducer should return the new state after applying the action to the previous state.', (assert) => {
   const newState = {
-    list: [ { title: 'Actress'}, { title: 'Web developer' }]
+    list: [{ title: 'Actress'}, { title: 'Web developer' }]
   }
 
   assert.plan(1)

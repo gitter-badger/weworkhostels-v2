@@ -10,7 +10,7 @@ const initialState = {
     //   how: "Pigeon post application",
     //   createDate: "01-07-25",
     //   sponsored: "NASA" }
-    ]
+  ]
 }
 
 function jobsReducer (state = initialState, action) {

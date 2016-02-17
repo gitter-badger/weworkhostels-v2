@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 class About extends Component {
-  render() {
+  render () {
     return (
-      <div className="container">
-        <div className="about content">
+      <div className='container'>
+        <div className='about content'>
           <h1>About Weworkhostels</h1>
 
           <h2>Hostels</h2>
