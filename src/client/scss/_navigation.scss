@@ -55,11 +55,15 @@
           list-style: none;
           float: left;
           margin-right: 15px;
-          padding: 10px;
           a {
             text-decoration: none;
             color: #FFF;
             font-size: 14px;
+            padding: 10px;
+          }
+
+          .active {
+            background-color: #6EA4C1;
           }
         }
       }

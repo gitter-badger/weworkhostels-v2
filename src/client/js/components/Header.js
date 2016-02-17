@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Link } from 'react-router'
+import { IndexLink } from 'react-router'
 
 class Header extends Component {
   render () {
@@ -31,13 +31,13 @@ class Navigation extends Component {
       <nav>
         <ul>
           <li>
-            <Link to={`/`}>Job Listings</Link>
+            <IndexLink activeClassName="active" to={`/`}>Job Listings</IndexLink>
           </li>
           <li>
-            <Link to={`/about`}>About</Link>
+            <IndexLink activeClassName="active" to={`/about`}>About</IndexLink>
           </li>
           <li>
-            <Link to={`/post`}>Post a Job</Link>
+            <IndexLink activeClassName="active" to={`/post`}>Post a Job</IndexLink>
           </li>
         </ul>
       </nav>
