@@ -18,6 +18,8 @@ let jobsReducer = (state = initialState, action) => {
     case 'ADD_JOB':
       var updatedList = state.list.concat([action.job])
       return { ...state, list: updatedList }
+    case 'ADD_NEWJOB':
+      return { ...state, newJob: action.job }
     default:
       return state
   }

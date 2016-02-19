@@ -4,3 +4,10 @@ export let addJob = (jobData) => {
     job: jobData
   }
 }
+
+export let addNewJob = (jobData) => {
+  return {
+    type: 'ADD_NEWJOB',
+    job: jobData
+  }
+}

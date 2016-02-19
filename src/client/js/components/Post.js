@@ -7,7 +7,7 @@ class Post extends Component {
       <div className='container'>
         <div className='post content'>
           <h1>Post a Hostel Job</h1>
-          <JobForm />
+          <JobForm actions={this.props.actions} jobs={this.props.jobs} />
         </div>
       </div>
     )

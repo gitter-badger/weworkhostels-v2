@@ -1,16 +1,7 @@
 import React, { Component } from 'react'
 import Input from './Input.js'
 import DescriptionInput from './DescriptionInput.js'
-import Firebase from 'firebase'
 import { Link } from 'react-router'
-
-let JobListingsRef
-
-if (env === 'production') {
-  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings')
-} else {
-  JobListingsRef = new Firebase('https://weworkhostels-v2.firebaseio.com/job-listings-dev')
-}
 
 class JobForm extends Component {
   constructor (props) {
@@ -28,23 +19,14 @@ class JobForm extends Component {
     }
   }
 
-  handleSubmit () {
-    JobListingsRef.push({
-      name: this.state.name,
-      title: this.state.title,
-      description: this.state.description,
-      city: this.state.city,
-      country: this.state.country,
-      email: this.state.email,
-      website: this.state.website,
-      how: this.state.how,
-      createDate: new Date().getTime(),
-      sponsored: this.state.sponsored
-    })
-  }
-
   handleState (value) {
     this.setState(value)
+  }
+
+  handleNewJob () {
+    // dispatch action
+    let job = this.state
+    this.props.actions.addNewJob(job)
   }
 
   render () {
@@ -60,7 +42,7 @@ class JobForm extends Component {
         <Input placeholder='How to apply'    inputName='how'         handleState={this.handleState.bind(this)} />
         <Input placeholder='Sponsored'       inputName='sponsored'   handleState={this.handleState.bind(this)} />
 
-        <Link to={`/`} onClick={this.handleSubmit.bind(this)} className='btn'>Post Job</Link>
+        <Link to={`post/preview`} onClick={this.handleNewJob.bind(this)} className='btn'>Preview</Link>
       </div>
     )
   }
