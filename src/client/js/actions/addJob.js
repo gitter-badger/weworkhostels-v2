@@ -5,9 +5,9 @@ export let addJob = (jobData) => {
   }
 }
 
-export let addNewJob = (jobData) => {
+export let addPreviewJob = (jobData) => {
   return {
-    type: 'ADD_NEWJOB',
+    type: 'ADD_PREVIEWJOB',
     job: jobData
   }
 }

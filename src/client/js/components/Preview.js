@@ -13,16 +13,16 @@ if (env === 'production') {
 class Preview extends Component {
   handleSubmit () {
     JobListingsRef.push({
-      name: this.props.jobs.newJob.name,
-      title: this.props.jobs.newJob.title,
-      description: this.props.jobs.newJob.description,
-      city: this.props.jobs.newJob.city,
-      country: this.props.jobs.newJob.country,
-      email: this.props.jobs.newJob.email,
-      website: this.props.jobs.newJob.website,
-      how: this.props.jobs.newJob.how,
+      name: this.props.jobs.previewJob.name,
+      title: this.props.jobs.previewJob.title,
+      description: this.props.jobs.previewJob.description,
+      city: this.props.jobs.previewJob.city,
+      country: this.props.jobs.previewJob.country,
+      email: this.props.jobs.previewJob.email,
+      website: this.props.jobs.previewJob.website,
+      how: this.props.jobs.previewJob.how,
       createDate: new Date().getTime(),
-      sponsored: this.props.jobs.newJob.sponsored
+      sponsored: this.props.jobs.previewJob.sponsored
     })
   }
 
@@ -33,15 +33,15 @@ class Preview extends Component {
         <div className='preview content'>
           <Link to={`/post`} className='btn'>Go back!</Link>
             <div className='info-container'>
-              <div className='title'>{this.props.jobs.newJob.title}</div>
-              <div className='name'>{this.props.jobs.newJob.name}</div>
-              <div className='location'>{this.props.jobs.newJob.city}, {this.props.jobs.newJob.country}</div>
-              <div className='website'>{this.props.jobs.newJob.website}</div>
+              <div className='title'>{this.props.jobs.previewJob.title}</div>
+              <div className='name'>{this.props.jobs.previewJob.name}</div>
+              <div className='location'>{this.props.jobs.previewJob.city}, {this.props.jobs.previewJob.country}</div>
+              <div className='website'>{this.props.jobs.previewJob.website}</div>
             </div>
-            <div className='job-description'>{this.props.jobs.newJob.description}</div>
+            <div className='job-description'>{this.props.jobs.previewJob.description}</div>
             <div className='apply'>
               <h3>APPLY FOR THIS POSITION</h3>
-              <p>{this.props.jobs.newJob.how}</p>
+              <p>{this.props.jobs.previewJob.how}</p>
             </div>
           <Link to={`/`} onClick={this.handleSubmit.bind(this)} className='btn'>Submit</Link>
         </div>

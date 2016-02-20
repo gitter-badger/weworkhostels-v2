@@ -16,10 +16,10 @@ const initialState = {
 let jobsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_JOB':
-      var updatedList = state.list.concat([action.job])
-      return { ...state, list: updatedList }
-    case 'ADD_NEWJOB':
-      return { ...state, newJob: action.job }
+      var updatedList = [...state.list, action.job]
+      return { ...state, list: updatedList } // create a state with the existing state
+    case 'ADD_PREVIEWJOB':
+      return { ...state, previewJob: action.job }
     default:
       return state
   }

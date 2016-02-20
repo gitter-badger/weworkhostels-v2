@@ -24,9 +24,8 @@ class JobForm extends Component {
   }
 
   handleNewJob () {
-    // dispatch action
     let job = this.state
-    this.props.actions.addNewJob(job)
+    this.props.actions.addPreviewJob(job)
   }
 
   render () {
