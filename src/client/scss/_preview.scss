@@ -1,0 +1,61 @@
+.preview {
+  padding-bottom: 25px;
+  .btn {
+    border-radius: 4px;
+    border: 1px solid #5888A2;
+    cursor: pointer;
+    padding: 14px;
+    line-height: normal;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    box-sizing: border-box;
+    text-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    text-decoration: none;
+    background-color: #5888A2;
+    color: #fff;
+    display: block;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .info-container {
+    padding: 10px 15px;
+    border-bottom: 1px solid #CCC;
+    .title {
+      margin-top: 10px;
+      line-height: 35px;
+      font-size: 35px;
+    }
+    .date {
+      text-transform: uppercase;
+      color: gray;
+      margin-bottom: 15px;
+      margin-top: 5px;
+    }
+    .name {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .location {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .website {
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+  }
+  .job-description {
+    padding: 30px 15px;
+    word-wrap: break-word;
+  }
+  .apply {
+    background-color: #efefef;
+    padding: 15px 20px;
+    word-wrap: break-word;
+  }
+}
