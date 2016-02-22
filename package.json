@@ -22,7 +22,7 @@
   "homepage": "http://weworkhostels.com",
   "dependencies": {
     "express": "^4.13.4",
-    "firebase": "^2.4.0",
+    "firebase": "^2.4.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
@@ -31,10 +31,10 @@
     "redux-router": "^1.0.0-beta7"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.2",
+    "autoprefixer": "^6.3.3",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
-    "babel-loader": "^6.2.2",
+    "babel-loader": "^6.2.3",
     "babel-plugin-syntax-object-rest-spread": "^6.5.0",
     "babel-plugin-transform-es2015-spread": "^6.5.2",
     "babel-plugin-transform-object-rest-spread": "^6.5.0",
@@ -48,12 +48,12 @@
     "jade": "^1.11.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
-    "postcss": "^5.0.15",
-    "postcss-loader": "^0.8.0",
+    "postcss": "^5.0.16",
+    "postcss-loader": "^0.8.1",
     "react-addons-test-utils": "^0.14.7",
     "sass-loader": "^3.1.2",
-    "snazzy": "^2.0.1",
-    "standard": "^6.0.5",
+    "snazzy": "^3.0.0",
+    "standard": "^6.0.7",
     "style-loader": "^0.13.0",
     "tape": "^4.4.0",
     "webpack": "^1.12.13"
