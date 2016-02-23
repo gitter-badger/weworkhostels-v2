@@ -11,3 +11,14 @@
 .container {
   padding: 0 50px;
 }
+
+// Clearfix
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}

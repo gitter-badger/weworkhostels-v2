@@ -29,7 +29,7 @@ class Navigation extends Component {
   render () {
     return (
       <nav>
-        <ul>
+        <ul className="clearfix">
           <li>
             <IndexLink activeClassName="active" to={`/`}>Job Listings</IndexLink>
           </li>

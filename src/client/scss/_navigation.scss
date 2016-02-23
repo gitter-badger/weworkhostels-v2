@@ -1,7 +1,8 @@
 .header-container {
   padding: 25px 50px;
   background-color: #5888A2;
-    @include chosenDevice(phone) {
+  @include chosenDevice(phone) {
+    padding: 20px 0;
   }
 
   header {
@@ -23,6 +24,9 @@
 
       h1 {
         color: #FFF;
+        @include chosenDevice(phone) {
+          margin-bottom: 15px;
+        }
       }
 
       span {
@@ -41,20 +45,27 @@
     }
     nav {
       overflow: hidden;
+      @include chosenDevice(phone) {
+        padding: 14px 0;
+      }
+
       ul {
         float: right;
         @include chosenDevice(phone) {
           float: none;
-          margin: 15px auto;
-          max-width: 247px;
-          overflow: hidden;
-          padding: 0px 0 0 15px;
+          margin: 0 auto;          
+          width: 295px;
+          padding: 0;
         }
 
         li {
           list-style: none;
           float: left;
           margin-right: 15px;
+          @include chosenDevice(phone) {
+            margin-right: 13px;
+
+          }
           a {
             text-decoration: none;
             color: #FFF;
