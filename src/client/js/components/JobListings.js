@@ -59,8 +59,8 @@ class JobListItem extends Component {
 }
 
 JobListings.propTypes = {
-  jobs: PropTypes.object.isRequired,
-  actions: PropTypes.object.isRequired
+  jobs: PropTypes.object.isRequired, // Value of jobs prop should be an object.
+  actions: PropTypes.objectOf(PropTypes.func).isRequired, // Value of actions prop should be an object containing properties with functions as values.
 }
 
 export default JobListings

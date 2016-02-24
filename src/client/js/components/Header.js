@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { IndexLink } from 'react-router'
 
 class Header extends Component {

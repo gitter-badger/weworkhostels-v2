@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Input from './Input.js'
 import DescriptionInput from './DescriptionInput.js'
 import { Link } from 'react-router'
@@ -46,6 +46,12 @@ class JobForm extends Component {
     )
   }
 }
+
+JobForm.propTypes = {
+  jobs: PropTypes.object.isRequired, // Value of jobs prop should be an object.
+  actions: PropTypes.objectOf(PropTypes.func).isRequired // Value of actions prop should be an object containing properties with functions as values.
+}
+
 
 export default JobForm
 
