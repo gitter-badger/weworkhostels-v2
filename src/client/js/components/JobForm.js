@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { ReduxRouter, pushState } from 'redux-router'
 import Input from './Input.js'
 import DescriptionInput from './DescriptionInput.js'
 import { Link } from 'react-router'
@@ -23,9 +24,25 @@ class JobForm extends Component {
     this.setState(value)
   }
 
+  validateForm () {
+    var valid = true
+    for (var field in this.state) {
+      if (this.state[field] === '') {
+        valid = false
+        console.log(field + ' is can not be empty!')
+      }
+    }
+    return valid
+  }
+
   handleNewJob () {
-    let job = this.state
-    this.props.actions.addPreviewJob(job)
+    if (this.validateForm()) {
+      // add new job as the last previewed job to the Redux store
+      // change location to post/preview
+      let job = this.state
+      this.props.actions.addPreviewJob(job)
+      this.props.dispatch(pushState(null, '/post/preview'))
+    }
   }
 
   render () {
@@ -41,7 +58,7 @@ class JobForm extends Component {
         <Input placeholder='How to apply'    inputName='how'         handleState={this.handleState.bind(this)} />
         <Input placeholder='Sponsored'       inputName='sponsored'   handleState={this.handleState.bind(this)} />
 
-        <Link to={`post/preview`} onClick={this.handleNewJob.bind(this)} className='btn'>Preview</Link>
+        <button onClick={this.handleNewJob.bind(this)} className='btn'>Preview</button>
       </div>
     )
   }

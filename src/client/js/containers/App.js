@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import { bindActionCreators } from 'redux'
+import { ReduxRouter, pushState } from 'redux-router'
 
 import JobListings from '../components/JobListings'
 import * as addJob from '../actions/addJob'
@@ -30,7 +31,7 @@ class App extends Component {
   renderChildren () {
     // creating new child elements with the new props merged with the original element's props.
     return React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, {actions: this.props.actions, jobs: this.props.jobs})
+      return React.cloneElement(child, {actions: this.props.actions, jobs: this.props.jobs, pushState: this.props.pushState, dispatch: this.props.dispatch})
     })
   }
   render () {
@@ -60,6 +61,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
   return {
+    dispatch,
+    pushState: bindActionCreators(pushState, dispatch),
     actions: bindActionCreators(addJob, dispatch)
   }
 }

@@ -27,7 +27,6 @@ class Preview extends Component {
   }
 
   render () {
-    console.log(this.props)
     return (
       <div className='container'>
         <div className='preview content'>
