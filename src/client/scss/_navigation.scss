@@ -17,10 +17,12 @@
 
     .nav-logo {
       float: left;
-      @include chosenDevice(phone) {
+
+      @include chosenDevice(tablet) {
         float: none;
         text-align: center;
       }
+
 
       h1 {
         color: #FFF;
@@ -38,7 +40,8 @@
         float: right;
         position: relative;
         top: -10px;
-        @include chosenDevice(phone) {
+
+        @include chosenDevice(tablet) {
           display: none;
         }
       }
@@ -51,21 +54,26 @@
 
       ul {
         float: right;
-        @include chosenDevice(phone) {
+        @include chosenDevice(tablet) {
           float: none;
-          margin: 0 auto;          
-          width: 295px;
           padding: 0;
+          margin: 13px auto;
+          width: 280px;
         }
 
         li {
           list-style: none;
           float: left;
           margin-right: 15px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
           @include chosenDevice(phone) {
             margin-right: 13px;
-
           }
+
           a {
             text-decoration: none;
             color: #FFF;
