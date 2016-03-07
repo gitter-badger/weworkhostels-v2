@@ -1,9 +1,6 @@
 .header-container {
-  padding: 25px 50px;
+  padding: 20px 50px;
   background-color: #5888A2;
-  @include chosenDevice(phone) {
-    padding: 20px 0;
-  }
 
   header {
     overflow: hidden;
@@ -26,9 +23,10 @@
 
       h1 {
         color: #FFF;
-        @include chosenDevice(phone) {
-          margin-bottom: 15px;
-        }
+        margin: 12px 0;
+        // @include chosenDevice(phone) {
+        //   margin-bottom: 15px;
+        // }
       }
 
       span {
@@ -48,8 +46,10 @@
     }
     nav {
       overflow: hidden;
-      @include chosenDevice(phone) {
-        padding: 14px 0;
+      padding-top: 15px;
+
+      @include chosenDevice(tablet) {
+        padding-top: 0;
       }
 
       ul {
