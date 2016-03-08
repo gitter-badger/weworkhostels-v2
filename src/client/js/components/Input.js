@@ -17,6 +17,17 @@ class Input extends Component {
     // set the value of our <input>
     this.setState({text: e.target.value})
   }
+
+  getErrorMessage () {
+    // if there is an error, return a message
+    // else return null
+    if (this.props.errorMsg) {
+      return this.props.placeholder + ' is not valid!'
+    } else {
+      return null
+    }
+  }
+
   render () {
     return (
       <div className='label'>
@@ -26,6 +37,7 @@ class Input extends Component {
           placeholder={this.props.placeholder}
           onChange={this.updateText.bind(this)}
           value={this.state.text} />
+        <span>{this.getErrorMessage()}</span>
       </div>
     )
   }
