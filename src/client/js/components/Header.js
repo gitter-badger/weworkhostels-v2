@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { IndexLink } from 'react-router'
+import { Link, IndexLink } from 'react-router'
 
 class Header extends Component {
   render () {
@@ -17,10 +17,10 @@ class Header extends Component {
 class NavLogo extends Component {
   render () {
     return (
-      <div className='nav-logo'>
-        <h1>We Work Hostels</h1>
-        <span>Work Exchange</span>
-      </div>
+      <Link className='nav-logo' to={`/`}>
+          <h1>We Work Hostels</h1>
+          <span>Work Exchange</span>
+      </Link>
     )
   }
 }

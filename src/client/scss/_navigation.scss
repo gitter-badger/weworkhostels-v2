@@ -13,6 +13,7 @@
 
 
     .nav-logo {
+      text-decoration: none;
       float: left;
 
       @include chosenDevice(tablet) {
