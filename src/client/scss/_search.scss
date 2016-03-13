@@ -1,0 +1,19 @@
+.search-bar {
+	border-bottom: 1px solid #5888A2;
+	background-color: #DDEAF1;
+	padding: 20px 50px;
+  input {
+  	width: 960px;
+  	display: block;
+  	margin: 0 auto;
+  	background-color: #DDEAF1;
+  	font-family: 'FontAwesome';
+  	font-size: 17px;
+  	border: none;
+    text-align: left;
+    &:focus {
+    	outline: none;
+    	color: #00253A;
+    }
+  }
+}

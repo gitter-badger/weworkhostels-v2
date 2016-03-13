@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import Header from '../components/Header'
 import { bindActionCreators } from 'redux'
 
+import SearchBar from '../components/SearchBar'
+
 import JobListings from '../components/JobListings'
 import * as addJob from '../actions/addJob'
 
@@ -38,6 +40,7 @@ class App extends Component {
       return (
         <div>
           <Header />
+          <SearchBar />
           <JobListings jobs={this.props.jobs} actions={this.props.actions} />
         </div>
       )
