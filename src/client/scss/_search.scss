@@ -15,5 +15,9 @@
     	outline: none;
     	color: #00253A;
     }
+
+    @include chosenDevice(phone) {
+      width: 300px;
+    }
   }
 }
