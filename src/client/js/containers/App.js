@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux'
 import SearchBar from '../components/SearchBar'
 
 import JobListings from '../components/JobListings'
-import * as addJob from '../actions/addJob'
+import * as actionCreators from '../actions/actionCreators'
 
 import Firebase from 'firebase'
 
@@ -63,7 +63,7 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
   return {
-    actions: bindActionCreators(addJob, dispatch)
+    actions: bindActionCreators(actionCreators, dispatch)
   }
 }
 
