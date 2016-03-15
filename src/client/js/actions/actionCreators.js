@@ -11,3 +11,16 @@ export let addPreviewJob = (jobData) => {
     job: jobData
   }
 }
+
+export let addMatchedJobs = (jobData) => {
+  return {
+    type: 'ADD_MATCHEDJOBS',
+    job: jobData
+  }
+}
+
+export let clearMatchedJobs = () => {
+  return {
+    type: 'CLEAR_MATCHEDJOBS',
+  }
+}
