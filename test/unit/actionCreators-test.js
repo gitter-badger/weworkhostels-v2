@@ -1,9 +1,9 @@
 import test from 'tape'
-import * as actions from '../../src/client/js/actions/addJob'
+import * as actionCreators from '../../src/client/js/actions/actionCreators'
 
-test('addJob action creator should return an action to add a job.', (assert) => {
+test('The action creator should return an action to add a job.', (assert) => {
   const jobData = { title: 'Manager' }
-  const actual = actions.addJob(jobData)
+  const actual = actionCreators.addJob(jobData)
   const expectedAction = {
     type: 'ADD_JOB',
     job: jobData
