@@ -7,7 +7,6 @@ import SearchBar from '../components/SearchBar'
 
 import JobListings from '../components/JobListings'
 import * as actionCreators from '../actions/actionCreators'
-
 import Firebase from 'firebase'
 
 import scss from '../../scss/main.scss'
@@ -29,6 +28,19 @@ class App extends Component {
     })
   }
 
+  searchJobs (keyword) {
+    JobListingsRef.orderByChild('country').equalTo(keyword).on('value', (snapshot) => {
+
+      if (snapshot.val() !== null && typeof snapshot.val() === 'object') {
+        for (var key in snapshot.val()) {
+          let job = snapshot.val()[key]
+          job['id'] = key
+          this.props.actions.addMatchedJobs(job)
+        }
+      }
+    })
+  }
+
   renderChildren () {
     // creating new child elements with the new props merged with the original element's props.
     return React.Children.map(this.props.children, (child) => {
@@ -40,8 +52,8 @@ class App extends Component {
       return (
         <div>
           <Header />
-          <SearchBar />
-          <JobListings jobs={this.props.jobs} actions={this.props.actions} />
+          <SearchBar searchJobs={this.searchJobs.bind(this)} actions={this.props.actions} />
+          <JobListings jobs={this.props.jobs} actions={this.props.actions} searchJobs={this.props.searchJobs}/>
         </div>
       )
     } else {
@@ -57,7 +69,8 @@ class App extends Component {
 
 let mapStateToProps = (state) => {
   return {
-    jobs: state.jobs
+    jobs: state.jobs,
+    searchJobs: state.searchJobs
   }
 }
 

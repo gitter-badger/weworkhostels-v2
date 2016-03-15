@@ -3,7 +3,9 @@ import { Link } from 'react-router'
 
 class JobListings extends Component {
   render () {
-    const list = this.props.jobs.list.sort((a, b) => {
+    let list
+    if (this.props.searchJobs.isSearching) {
+      list = this.props.searchJobs.list.sort((a, b) => {
       // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
       if (a.createDate > b.createDate) {
         return -1 // move a to lower index than b
@@ -12,7 +14,7 @@ class JobListings extends Component {
         return 1 // move b to lower index than a
       }
       return 0 // leave a and b unchanged with respect to each other
-    }).map((jobObject, index) =>
+      }).map((jobObject, index) =>
       // create an array of components
       <JobListItem key={index}
                    index={index}
@@ -22,7 +24,29 @@ class JobListings extends Component {
                    city={jobObject.city}
                    country={jobObject.country}
                    id={jobObject.id} />
-    )
+    )}
+
+    else { // if search is not active
+      list = this.props.jobs.list.sort((a, b) => {
+      // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
+      if (a.createDate > b.createDate) {
+        return -1 // move a to lower index than b
+      }
+      if (a.createDate < b.createDate) {
+        return 1 // move b to lower index than a
+      }
+      return 0 // leave a and b unchanged with respect to each other
+      }).map((jobObject, index) =>
+      // create an array of components
+      <JobListItem key={index}
+                   index={index}
+                   date={jobObject.createDate}
+                   title={jobObject.title}
+                   name={jobObject.name}
+                   city={jobObject.city}
+                   country={jobObject.country}
+                   id={jobObject.id} />
+    )}
 
     return (
       <div className='container'>
