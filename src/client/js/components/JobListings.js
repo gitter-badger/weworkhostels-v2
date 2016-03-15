@@ -1,53 +1,37 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 
+let compare = (a, b) => {
+  // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
+  if (a.createDate > b.createDate) {
+    return -1
+  }
+  if (a.createDate < b.createDate) {
+    return 1
+  }
+  return 0
+}
+
+let makeIntoComponent = (jobObject, index) =>
+  // return a unique <JobListItem /> component
+  <JobListItem key={index}
+               index={index}
+               date={jobObject.createDate}
+               title={jobObject.title}
+               name={jobObject.name}
+               city={jobObject.city}
+               country={jobObject.country}
+               id={jobObject.id} />
+
 class JobListings extends Component {
   render () {
     let list
     if (this.props.searchJobs.isSearching) {
-      list = this.props.searchJobs.list.sort((a, b) => {
-      // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
-      if (a.createDate > b.createDate) {
-        return -1 // move a to lower index than b
-      }
-      if (a.createDate < b.createDate) {
-        return 1 // move b to lower index than a
-      }
-      return 0 // leave a and b unchanged with respect to each other
-      }).map((jobObject, index) =>
-      // create an array of components
-      <JobListItem key={index}
-                   index={index}
-                   date={jobObject.createDate}
-                   title={jobObject.title}
-                   name={jobObject.name}
-                   city={jobObject.city}
-                   country={jobObject.country}
-                   id={jobObject.id} />
-    )}
-
-    else { // if search is not active
-      list = this.props.jobs.list.sort((a, b) => {
-      // Sort job from newest Epoch timestamp (larger #) to earliest Epoch
-      if (a.createDate > b.createDate) {
-        return -1 // move a to lower index than b
-      }
-      if (a.createDate < b.createDate) {
-        return 1 // move b to lower index than a
-      }
-      return 0 // leave a and b unchanged with respect to each other
-      }).map((jobObject, index) =>
-      // create an array of components
-      <JobListItem key={index}
-                   index={index}
-                   date={jobObject.createDate}
-                   title={jobObject.title}
-                   name={jobObject.name}
-                   city={jobObject.city}
-                   country={jobObject.country}
-                   id={jobObject.id} />
-    )}
-
+      list = this.props.searchJobs.list.sort(compare).map(makeIntoComponent)
+    } else {
+      // if search is NOT ACTIVE
+      list = this.props.jobs.list.sort(compare).map(makeIntoComponent)
+    }
     return (
       <div className='container'>
         <div className='job-listings content'>
