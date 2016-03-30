@@ -40,7 +40,7 @@ class App extends Component {
       return (
         <div>
           <Header />
-          <SearchBar jobs={this.props.jobs} />
+          <SearchBar jobs={this.props.jobs} actions={this.props.actions} />
           <JobListings jobs={this.props.jobs} actions={this.props.actions} />
         </div>
       )

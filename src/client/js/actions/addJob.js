@@ -11,3 +11,11 @@ export let addPreviewJob = (jobData) => {
     job: jobData
   }
 }
+
+export let updateList = (newList) => {
+	console.log(newList, ' da new list')
+	return {
+		type: 'UPDATE_LIST',
+		newList: newList
+	}
+}

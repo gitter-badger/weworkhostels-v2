@@ -15,7 +15,7 @@ class SearchBar extends Component {
   handleKeyPress (e) {
     this.setState({term: e.target.value})
 
-    var searchResults = this.props.jobs['list'].filter((el) => {
+    var searchResults = this.props.jobs['originalList'].filter((el) => {
       for (var key in el) {
         if (typeof el[key] === 'number') {
 
@@ -35,12 +35,13 @@ class SearchBar extends Component {
     // Everytime the data in the store changes, React will re-render the jobListings component.
 
     // To do that we must dispatch an action...
-
-    console.log(this.state)
+    
+    if (this.state.results.length > 0) {      
+      this.props.actions.updateList(this.state.results)      
+    }
   }
 
   render () {
-    console.log(this)
     return (
       <div className='search-bar'>
         <input type="text"

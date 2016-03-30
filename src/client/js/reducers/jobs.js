@@ -17,7 +17,9 @@ let jobsReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_JOB':
       var updatedList = [...state.list, action.job]
-      return { ...state, list: updatedList } // create a state with the existing state
+      return { ...state, list: updatedList, originalList: updatedList } // create a state with the existing state
+    case 'UPDATE_LIST':
+      return { ...state, list: action.newList }
     case 'ADD_PREVIEWJOB':
       return { ...state, previewJob: action.job }
     default:
